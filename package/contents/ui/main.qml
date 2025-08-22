@@ -121,9 +121,15 @@ PlasmoidItem {
             shouldBlur = tasksModel.visibleExists;
             break;
         case 3:
-            shouldBlur = true;
+            shouldBlur = !tasksModel.activeExists;
             break;
         case 4:
+            shouldBlur = !tasksModel.visibleExists;
+            break;
+        case 5:
+            shouldBlur = true;
+            break;
+        case 6:
             shouldBlur = false;
         }
         return (shouldBlur && isEnabled && !effectHideBlur) || effectShowBlur;
@@ -141,9 +147,15 @@ PlasmoidItem {
             shouldGrain = tasksModel.visibleExists;
             break;
         case 3:
-            shouldGrain = true;
+            shouldGrain = !tasksModel.activeExists;
             break;
         case 4:
+            shouldGrain = !tasksModel.visibleExists;
+            break;
+        case 5:
+            shouldGrain = true;
+            break;
+        case 6:
             shouldGrain = false;
         }
         return (shouldGrain && isEnabled && !effectHideGrain) || effectShowGrain;
@@ -162,9 +174,15 @@ PlasmoidItem {
             showEffect = tasksModel.visibleExists;
             break;
         case 3:
-            showEffect = true;
+            showEffect = !tasksModel.activeExists;
             break;
         case 4:
+            showEffect = !tasksModel.visibleExists;
+            break;
+        case 5:
+            showEffect = true;
+            break;
+        case 6:
             showEffect = false;
         }
         return (showEffect && isEnabled && !effectHideColorization) || effectShowColorization;
@@ -183,9 +201,15 @@ PlasmoidItem {
             shouldPixelate = tasksModel.visibleExists;
             break;
         case 3:
-            shouldPixelate = true;
+            shouldPixelate = !tasksModel.activeExists;
             break;
         case 4:
+            shouldPixelate = !tasksModel.visibleExists;
+            break;
+        case 5:
+            shouldPixelate = true;
+            break;
+        case 6:
             shouldPixelate = false;
         }
         return (shouldPixelate && isEnabled && !effectHidePixelate) || effectShowPixelate;
