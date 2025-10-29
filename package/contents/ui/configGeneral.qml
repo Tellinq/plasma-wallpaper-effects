@@ -136,6 +136,12 @@ KCM.SimpleKCM {
             'label': i18n("At least one window is shown")
         },
         {
+            'label': i18n("No active window is present")
+        },
+        {
+            'label': i18n("No windows are shown")
+        },
+        {
             'label': i18n("Always")
         },
         {
@@ -214,7 +220,7 @@ KCM.SimpleKCM {
             }
 
             RowLayout {
-                enabled: blurModeCombo.currentIndex !== 4
+                enabled: blurModeCombo.currentIndex !== 6
                 Kirigami.FormData.label: i18n("Blur radius:")
                 SpinBox {
                     id: blurRadiusSpinBox
@@ -245,14 +251,14 @@ KCM.SimpleKCM {
                 id: effectsHideBlurInput
                 Kirigami.FormData.label: i18n("Hide in:")
                 model: effects.loadedEffects
-                enabled: blurModeCombo.currentIndex !== 4
+                enabled: blurModeCombo.currentIndex !== 6
             }
 
             Components.CheckableValueListView {
                 id: effectsShowBlurInput
                 Kirigami.FormData.label: i18n("Show in:")
                 model: effects.loadedEffects
-                enabled: blurModeCombo.currentIndex !== 4
+                enabled: blurModeCombo.currentIndex !== 6
             }
 
             Kirigami.Separator {
@@ -274,7 +280,7 @@ KCM.SimpleKCM {
                 Kirigami.FormData.label: i18n("Pixel size:")
                 from: 0
                 to: 100
-                enabled: pixelateModeCombo.currentIndex !== 4
+                enabled: pixelateModeCombo.currentIndex !== 6
             }
 
             Kirigami.Separator {
@@ -286,14 +292,14 @@ KCM.SimpleKCM {
                 id: effectsHidePixelateInput
                 Kirigami.FormData.label: i18n("Hide in:")
                 model: effects.loadedEffects
-                enabled: pixelateModeCombo.currentIndex !== 4
+                enabled: pixelateModeCombo.currentIndex !== 6
             }
 
             Components.CheckableValueListView {
                 id: effectsShowPixelateInput
                 Kirigami.FormData.label: i18n("Show in:")
                 model: effects.loadedEffects
-                enabled: pixelateModeCombo.currentIndex !== 4
+                enabled: pixelateModeCombo.currentIndex !== 6
             }
 
             Kirigami.Separator {
@@ -316,19 +322,19 @@ KCM.SimpleKCM {
                 Kirigami.ContextualHelpButton {
                     toolTipText: i18n("Less random grain but supports older devices")
                 }
-                enabled: grainModeCombo.currentIndex !== 4
+                enabled: grainModeCombo.currentIndex !== 6
             }
 
             RadioButton {
                 Kirigami.FormData.label: i18n("Animate:")
-                enabled: grainModeCombo.currentIndex !== 4
+                enabled: grainModeCombo.currentIndex !== 6
                 text: i18n("Never")
                 checked: !grainAnimateCheckbox.checked && !grainAnimateChangeCheckbox.checked
                 ButtonGroup.group: animateButtonGroup
             }
             RadioButton {
                 id: grainAnimateCheckbox
-                enabled: grainModeCombo.currentIndex !== 4
+                enabled: grainModeCombo.currentIndex !== 6
                 text: i18n("Always")
                 ButtonGroup.group: animateButtonGroup
                 checked: cfg_grainAnimate
@@ -336,7 +342,7 @@ KCM.SimpleKCM {
             }
             RadioButton {
                 id: grainAnimateChangeCheckbox
-                enabled: grainModeCombo.currentIndex !== 4
+                enabled: grainModeCombo.currentIndex !== 6
                 text: i18n("On change")
                 ButtonGroup.group: animateButtonGroup
                 checked: cfg_grainAnimateChange
@@ -355,7 +361,7 @@ KCM.SimpleKCM {
                 onValueModified: {
                     root.cfg_grainAmount = value / grainAmountInput.multiplier;
                 }
-                enabled: grainModeCombo.currentIndex !== 4
+                enabled: grainModeCombo.currentIndex !== 6
             }
 
             Kirigami.Separator {
@@ -367,14 +373,14 @@ KCM.SimpleKCM {
                 id: effectsHideGrainInput
                 Kirigami.FormData.label: i18n("Hide in:")
                 model: effects.loadedEffects
-                enabled: grainModeCombo.currentIndex !== 4
+                enabled: grainModeCombo.currentIndex !== 6
             }
 
             Components.CheckableValueListView {
                 id: effectsShowGrainInput
                 Kirigami.FormData.label: i18n("Show in:")
                 model: effects.loadedEffects
-                enabled: grainModeCombo.currentIndex !== 4
+                enabled: grainModeCombo.currentIndex !== 6
             }
 
             Kirigami.Separator {
@@ -397,7 +403,7 @@ KCM.SimpleKCM {
                 onValueModified: {
                     root.cfg_brightness = value / brightnessInput.multiplier;
                 }
-                enabled: colorEffectsModeCombo.currentIndex !== 4
+                enabled: colorEffectsModeCombo.currentIndex !== 6
             }
             Components.DoubleSpinBox {
                 id: contrastInput
@@ -408,7 +414,7 @@ KCM.SimpleKCM {
                 onValueModified: {
                     root.cfg_contrast = value / contrastInput.multiplier;
                 }
-                enabled: colorEffectsModeCombo.currentIndex !== 4
+                enabled: colorEffectsModeCombo.currentIndex !== 6
             }
             Components.DoubleSpinBox {
                 id: saturationInput
@@ -419,7 +425,7 @@ KCM.SimpleKCM {
                 onValueModified: {
                     root.cfg_saturation = value / saturationInput.multiplier;
                 }
-                enabled: colorEffectsModeCombo.currentIndex !== 4
+                enabled: colorEffectsModeCombo.currentIndex !== 6
             }
 
             Kirigami.Separator {
@@ -436,7 +442,7 @@ KCM.SimpleKCM {
                 onValueModified: {
                     root.cfg_colorization = value / colorizationInput.multiplier;
                 }
-                enabled: colorEffectsModeCombo.currentIndex !== 4
+                enabled: colorEffectsModeCombo.currentIndex !== 6
             }
 
             RadioButton {
@@ -446,7 +452,7 @@ KCM.SimpleKCM {
                 ButtonGroup.group: colorizationModeGroup
                 property int index: 0
                 checked: plasmoid.configuration.colorizationColorMode === index
-                enabled: cfg_colorization > 0 && colorEffectsModeCombo.currentIndex !== 4
+                enabled: cfg_colorization > 0 && colorEffectsModeCombo.currentIndex !== 6
             }
             RadioButton {
                 id: systemColorizationColorRadio
@@ -454,7 +460,7 @@ KCM.SimpleKCM {
                 ButtonGroup.group: colorizationModeGroup
                 property int index: 1
                 checked: plasmoid.configuration.colorizationColorMode === index
-                enabled: cfg_colorization > 0 && colorEffectsModeCombo.currentIndex !== 4
+                enabled: cfg_colorization > 0 && colorEffectsModeCombo.currentIndex !== 6
             }
 
             ButtonGroup {
@@ -475,7 +481,7 @@ KCM.SimpleKCM {
                 onAccepted: {
                     cfg_colorizationColor = color;
                 }
-                enabled: cfg_colorization > 0 && colorEffectsModeCombo.currentIndex !== 4
+                enabled: cfg_colorization > 0 && colorEffectsModeCombo.currentIndex !== 6
                 visible: customColorizationColorRadio.checked
             }
 
@@ -484,7 +490,7 @@ KCM.SimpleKCM {
                 Kirigami.FormData.label: i18n("Color:")
                 model: systemColors
                 visible: systemColorizationColorRadio.checked
-                enabled: cfg_colorization > 0 && colorEffectsModeCombo.currentIndex !== 4
+                enabled: cfg_colorization > 0 && colorEffectsModeCombo.currentIndex !== 6
             }
 
             ComboBox {
@@ -492,7 +498,7 @@ KCM.SimpleKCM {
                 Kirigami.FormData.label: i18n("Color set:")
                 model: systemColorSets
                 visible: systemColorizationColorRadio.checked
-                enabled: cfg_colorization > 0 && colorEffectsModeCombo.currentIndex !== 4
+                enabled: cfg_colorization > 0 && colorEffectsModeCombo.currentIndex !== 6
             }
 
             Kirigami.Separator {
@@ -504,14 +510,14 @@ KCM.SimpleKCM {
                 id: effectsHideColorizationInput
                 Kirigami.FormData.label: i18n("Hide in:")
                 model: effects.loadedEffects
-                enabled: colorEffectsModeCombo.currentIndex !== 4
+                enabled: colorEffectsModeCombo.currentIndex !== 6
             }
 
             Components.CheckableValueListView {
                 id: effectsShowColorizationInput
                 Kirigami.FormData.label: i18n("Show in:")
                 model: effects.loadedEffects
-                enabled: colorEffectsModeCombo.currentIndex !== 4
+                enabled: colorEffectsModeCombo.currentIndex !== 6
             }
 
             Kirigami.Separator {
