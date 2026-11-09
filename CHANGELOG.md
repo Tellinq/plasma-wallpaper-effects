@@ -1,5 +1,65 @@
 # Changelog
 
+## [2.1.1](https://github.com/luisbocanegra/plasma-wallpaper-effects/compare/v2.1.0...v2.1.1) (2026-05-16)
+
+
+### Bug Fixes
+
+* increase range of saturation color effect ([37321b9](https://github.com/luisbocanegra/plasma-wallpaper-effects/commit/37321b99ac505aa79883469f9a969fa0ce77a4ec))
+
+## [2.1.0](https://github.com/luisbocanegra/plasma-wallpaper-effects/compare/v2.0.0...v2.1.0) (2025-12-26)
+
+
+### Features
+
+* update Polish translation ([74cec74](https://github.com/luisbocanegra/plasma-wallpaper-effects/commit/74cec748879639ed9c4167cdc386c3536cca2e12))
+
+
+### Bug Fixes
+
+* extra comma in desktop effects text field ([d18d691](https://github.com/luisbocanegra/plasma-wallpaper-effects/commit/d18d691e3a19833ea4f46a5f338b51d73e5bcd07))
+
+## [2.0.0](https://github.com/luisbocanegra/plasma-wallpaper-effects/compare/v1.2.0...v2.0.0) (2025-12-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* Rounded corners margin is now automatically adjusted based on the panels size, disable automatic margins option to use the previous fixed values
+
+### Features
+
+* automatic rounded corners margin based on panel size ([c8bedb0](https://github.com/luisbocanegra/plasma-wallpaper-effects/commit/c8bedb0d45a04c619ed943a2d980221c45d6c278))
+
+## [1.2.0](https://github.com/luisbocanegra/plasma-wallpaper-effects/compare/v1.1.0...v1.2.0) (2025-12-10)
+
+
+### Features
+
+* update Polish translation ([a8ed1ee](https://github.com/luisbocanegra/plasma-wallpaper-effects/commit/a8ed1eeebcc4ac1d6cde2a5c95c3f207666061e5))
+
+## [1.1.0](https://github.com/luisbocanegra/plasma-wallpaper-effects/compare/v1.0.0...v1.1.0) (2025-12-04)
+
+
+### Features
+
+* option to remove the enable/configure actions from Desktop menu ([342c7d5](https://github.com/luisbocanegra/plasma-wallpaper-effects/commit/342c7d573ee2b6c92f08327ab2b593274b080b05))
+
+## [1.0.0](https://github.com/luisbocanegra/plasma-wallpaper-effects/compare/v0.7.1...v1.0.0) (2025-10-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* widget now requires Qt version 6.7 or newer (shouldn't be a problem for anyone using Plasma 6.1 and newer)
+
+### Features
+
+* rounded corners border ([117bb80](https://github.com/luisbocanegra/plasma-wallpaper-effects/commit/117bb80f9578e069bf652f3d84431caec25fd08c))
+
+
+### Bug Fixes
+
+* jaggy rounded corners ([409b2dd](https://github.com/luisbocanegra/plasma-wallpaper-effects/commit/409b2dd297025a76998323b52c10be685d57925d))
+
 ## [0.7.1](https://github.com/luisbocanegra/plasma-wallpaper-effects/compare/v0.7.0...v0.7.1) (2025-09-21)
 
 

@@ -1,5 +1,5 @@
 # Translation of effects in LANGUAGE
-# Copyright (C) 2025
+# Copyright (C) 2026
 # This file is distributed under the same license as the effects package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: effects\n"
 "Report-Msgid-Bugs-To: https://github.com/luisbocanegra/plasma-wallpaper-effects\n"
-"POT-Creation-Date: 2025-10-22 06:55+0000\n"
+"POT-Creation-Date: 2026-05-16 16:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -170,6 +170,14 @@ msgid "Enabled:"
 msgstr ""
 
 #: ../contents/ui/configGeneral.qml
+msgid "Contextual actions:"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml
+msgid "Disable to remove the Configure and Enable effects action from the Desktop right-click menu."
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml
 msgid "Hide widget:"
 msgstr ""
 
@@ -302,14 +310,6 @@ msgid "Draw rounded corners on top of the wallpaper"
 msgstr ""
 
 #: ../contents/ui/configGeneral.qml
-msgid "Border Color"
-msgstr ""
-
-#: ../contents/ui/configGeneral.qml
-msgid "Border"
-msgstr ""
-
-#: ../contents/ui/configGeneral.qml
 msgid "Radius (Deprecated):"
 msgstr ""
 
@@ -330,19 +330,31 @@ msgid "Margins"
 msgstr ""
 
 #: ../contents/ui/configGeneral.qml
-msgid "Top:"
+msgid "Automatic:"
 msgstr ""
 
 #: ../contents/ui/configGeneral.qml
-msgid "Bottom:"
+msgid "Adjust based on panel sizes. Works better with always visible non-floating panels."
 msgstr ""
 
 #: ../contents/ui/configGeneral.qml
-msgid "Left:"
+msgid "Offsets:"
 msgstr ""
 
 #: ../contents/ui/configGeneral.qml
-msgid "Right:"
+msgid "Margins:"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml
+msgid "Border Color"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml
+msgid "Border"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml
+msgid "Width:"
 msgstr ""
 
 #: ../contents/ui/configGeneral.qml
